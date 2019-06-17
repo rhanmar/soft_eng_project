@@ -1,0 +1,13 @@
+{
+    "name": "dima/my-first-project",
+    "bin": "bin/brain-games",
+    "description": "project 1",
+    "authors": [
+        {
+            "name": "Dmitriy",
+            "email": "dimontura@yandex.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
