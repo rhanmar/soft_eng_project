@@ -9,5 +9,12 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "autoload": {
+      "files": [
+        "src/cli.php"
+      ]
+    },
+    "require": {
+        "wp-cli/php-cli-tools": "dev-master"
+    }
 }
