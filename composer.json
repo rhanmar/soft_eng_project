@@ -8,7 +8,10 @@
             "email": "dimontura@yandex.ru"
         }
     ],
-    "minimum-stability": "dev",
+
+    "scripts": {
+        "phpcs": "phpcs"
+    },
     "autoload": {
       "files": [
         "src/cli.php"
@@ -16,5 +19,8 @@
     },
     "require": {
         "wp-cli/php-cli-tools": "dev-master"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.0@dev"
     }
 }
