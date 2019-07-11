@@ -1,6 +1,9 @@
 {
     "name": "rhanmar1/brain-games",
-    "bin": "bin/brain-games",
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even"
+    ],
     "description": "project 1",
     "authors": [
         {
@@ -14,7 +17,8 @@
     },
     "autoload": {
       "files": [
-        "src/cli.php"
+        "src/cli.php",
+        "src/even.php"
       ]
     },
     "require": {

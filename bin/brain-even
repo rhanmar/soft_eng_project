@@ -2,7 +2,7 @@
 <?php
 
 use function \BrainGames\Cli\run;
-use function \BrainGames\Even\play;
+//use function \BrainGames\Even\play;
 
 require __DIR__ . '/../vendor/autoload.php';
 
