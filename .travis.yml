@@ -2,8 +2,7 @@ language: php
 php:
   - '7.2'
 
-install:
-  - make install
+install: make install
 
 script: make lint
 
