@@ -2,11 +2,11 @@
 new brain-games
 chmod 665 composer.json
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/rhanmar/project1/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/rhanmar/php-project-lvl1/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/rhanmar/project1/test_coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/rhanmar/php-project-lvl1/test_coverage)
 
-[![Build Status](https://travis-ci.org/rhanmar/project1.svg?branch=master)](https://travis-ci.org/rhanmar/project1)
+[![Build Status](https://travis-ci.org/rhanmar/php-project-lvl1.svg?branch=master)](https://travis-ci.org/rhanmar/php-project-lvl1)
 
 step 4
 [![asciicast](https://asciinema.org/a/W3zmxobTvgv9D6zE4nXC6t4gy.svg)](https://asciinema.org/a/W3zmxobTvgv9D6zE4nXC6t4gy)
