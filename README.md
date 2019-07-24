@@ -22,3 +22,6 @@ step 7
 
 step 8
 [![asciicast](https://asciinema.org/a/DjvmDVAeUk0mCFiTvitu1RF9u.svg)](https://asciinema.org/a/DjvmDVAeUk0mCFiTvitu1RF9u)
+
+STEP 8 WITH OTHER REQUEST PATH
+[![asciicast](https://asciinema.org/a/5z382Hdlo9Hioow3s1K11zCx0.svg)](https://asciinema.org/a/5z382Hdlo9Hioow3s1K11zCx0)
