@@ -1,6 +1,6 @@
 # project1
-new brain-games
-chmod 665 composer.json
+Сообщение для ментора:
+По определённым причинам проект был сделан в другом репозитории (https://github.com/rhanmar/project1), поэтому установка пакета в некоторых клипах содержит в себе другое название (rhanmar1/project1). После того, как были запушены изменения в данный репозиторий, произведено изменение бейджиков (исправлены ссылки) и была произведена установка пакета (последний клип "STEP 8 WITH OTHER REQUEST PATH").
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/rhanmar/php-project-lvl1/maintainability)
 
