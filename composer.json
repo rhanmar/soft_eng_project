@@ -1,6 +1,8 @@
 {
     "name": "rhanmar1/brain-games",
     "description": "project1: brain-games",
+    "type": "project",
+    "keywords": ["BrainGames", "PHP", "project"],
     "authors": [
         {
             "name": "Dmitriy",
