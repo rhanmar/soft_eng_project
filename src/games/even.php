@@ -3,7 +3,7 @@
 namespace BrainGames\games\Even;
 
 use function BrainGames\Core\runCore;
-use const BrainGames\Core\NUMBER_OF_ROUNDS;
+use const BrainGames\Core\ROUNDS_COUNT;
 
 const DESCRIPTION = 'Answer "yes" if number even otherwise answer "no"';
 const MIN = 1;
@@ -17,10 +17,10 @@ function isEven($number)
 function runEven()
 {
     $gameData = [];
-    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $number = rand(MIN, MAX);
         $correctAnswer = isEven($number) ? 'yes' : 'no';
-        $gameData[] = ['question' => $number, 'correct answer' => $correctAnswer];
+        $gameData[] = [$number, $correctAnswer];
     }
     runCore($gameData, DESCRIPTION);
 }

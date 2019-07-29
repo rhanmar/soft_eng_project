@@ -5,7 +5,7 @@ namespace BrainGames\Core;
 use function \cli\line;
 use function \cli\prompt;
 
-const NUMBER_OF_ROUNDS = 3;
+const ROUNDS_COUNT = 3;
 
 function runCore($gameData, $gameDescription)
 {
@@ -14,10 +14,8 @@ function runCore($gameData, $gameDescription)
     line();
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
-        $question = $gameData[$i]['question'];
-        $correctAnswer = $gameData[$i]['correct answer'];
-        
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        [$question, $correctAnswer] = $gameData[$i];
         line();
         line("Question: %s", $question);
         $answer = prompt('Your answer: ');

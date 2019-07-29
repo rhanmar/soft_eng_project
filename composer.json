@@ -1,8 +1,8 @@
 {
-    "name": "rhanmar1/brain-games",
+    "name": "rhanmar1/project1",
     "description": "project1: brain-games",
     "type": "project",
-    "keywords": ["BrainGames", "PHP", "project"],
+    "keywords": ["BrainGames", "PHP", "project1"],
     "authors": [
         {
             "name": "Dmitriy",
@@ -18,12 +18,12 @@
     ],
     "autoload": {
       "files": [
-        "src/Core.php",
-        "src/games/Even.php",
-        "src/games/Calc.php",
-        "src/games/GCD.php",
-        "src/games/Progression.php",
-        "src/games/Prime.php"
+        "src/core.php",
+        "src/games/even.php",
+        "src/games/calc.php",
+        "src/games/gcd.php",
+        "src/games/progression.php",
+        "src/games/prime.php"
       ]
     },
     "scripts": {

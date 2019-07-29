@@ -3,7 +3,7 @@
 namespace BrainGames\games\Prime;
 
 use function BrainGames\Core\runCore;
-use const BrainGames\Core\NUMBER_OF_ROUNDS;
+use const BrainGames\Core\ROUNDS_COUNT;
 
 const DECSRIPTION = "Answer \"yes\" if given number is prime. Otherwise answer \"no\"";
 const MIN = 1;
@@ -11,7 +11,7 @@ const MAX = 10;
 
 function isPrime($number)
 {
-    if ($number === 1) {
+    if ($number <= 1) {
         return false;
     }
     $middleDiv = floor($number / 2);
@@ -26,10 +26,10 @@ function isPrime($number)
 function runPrime()
 {
     $gameData = [];
-    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $number = rand(MIN, MAX);
         $correctAnswer = (isPrime($number) ? 'yes' : 'no');
-        $gameData[] = ['question' => $number, 'correct answer' => strval($correctAnswer)];
+        $gameData[] = [$number, strval($correctAnswer)];
     }
     runCore($gameData, DECSRIPTION);
 }
