@@ -16,11 +16,11 @@ function runCalc()
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $number1 = rand(MIN, MAX);
         $number2 = rand(MIN, MAX);
-        $operand = OPERATIONS[array_rand(OPERATIONS)];
+        $operation = OPERATIONS[array_rand(OPERATIONS)];
 
         $correctAnswer = null;
 
-        switch ($operand) {
+        switch ($operation) {
             case '+':
                 $correctAnswer = $number1 + $number2;
                 break;
@@ -30,7 +30,7 @@ function runCalc()
             case '-':
                 $correctAnswer = $number1 - $number2;
         }
-        $question = "{$number1} {$operand} {$number2}";
+        $question = "{$number1} {$operation} {$number2}";
 
         $gameData[] = [$question, strval($correctAnswer)];
     }
