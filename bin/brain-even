@@ -3,9 +3,6 @@
 
 use function BrainGames\games\Even\runEven;
 
-//require __DIR__ . '/../vendor/autoload.php';
-
-
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
 

@@ -6,35 +6,31 @@ use function BrainGames\Core\runCore;
 use const BrainGames\Core\ROUNDS_COUNT;
 
 const DESCRIPTION = 'What number is missing in the progression?';
-const LENGTH_OF_PROGRESSION = 10;
+const PROGRESSION_LENGTH = 10;
 
-function makeProgression()
+function makeProgression($start, $diff, $length)
 {
-    $gameData = [];
-
-    $diff = rand(1, 5); // common difference of successive members
-    $start = rand(1, 10); // start member of arithmetic progression
-    $progression = []; // arithmetic progression
-
-    for ($i = 0; $i < LENGTH_OF_PROGRESSION; $i++) {
-            $progression[] = $start + $diff * $i;
+    $progression = [];
+    for ($i = 0; $i < $length; $i++) {
+        $progression[] = $start + $diff * $i;
     }
-        return $progression;
+    return $progression;
 }
-
 
 function runProgression()
 {
     $gameData = [];
 
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $progression = makeProgression();
+        $diff = rand(1, 5); // common difference of successive members
+        $start = rand(1, 10); // start member of arithmetic progression
+        $progression = makeProgression($start, $diff, PROGRESSION_LENGTH);
 
-        $missingIndex = rand(0, count($progression) - 1);
-        $missingElement = $progression[$missingIndex];
-        $progression[$missingIndex] = '..';
+        $missingElementIndex = rand(0, count($progression) - 1);
+        $correctAnswer = $progression[$missingElementIndex];
+        $progression[$missingElementIndex] = '..';
         $question = implode(" ", $progression);
-        $gameData[] = [$question, strval($missingElement)];
+        $gameData[] = [$question, strval($correctAnswer)];
     }
 
     runCore($gameData, DESCRIPTION);

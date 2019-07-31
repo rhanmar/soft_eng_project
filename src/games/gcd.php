@@ -24,9 +24,9 @@ function runGcd()
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $number1 = rand(MIN, MAX);
         $number2 = rand(MIN, MAX);
-        $gcd = findGcd($number1, $number2);
+        $correctAnswer = findGcd($number1, $number2);
         $question = "{$number1} {$number2}";
-        $gameData[] = [$question, strval($gcd)];
+        $gameData[] = [$question, strval($correctAnswer)];
     }
     runCore($gameData, DESCRIPTION);
 }
