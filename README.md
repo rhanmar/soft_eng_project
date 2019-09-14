@@ -8,7 +8,7 @@ This project is a set of console mini-games.
 
 ## Installation
 With Composer:
-`composer global require rhanmar1/brain-games:dev-master`
+`composer global require rhanmar1/brain-games`
 
 ## Example of gameplay
 
