@@ -1,25 +1,54 @@
-# project1
-Сообщение для ментора:
-По определённым причинам проект был сделан в другом репозитории (https://github.com/rhanmar/project1), поэтому установка пакета в некоторых клипах содержит в себе другое название (rhanmar1/project1). После того, как были запушены изменения в данный репозиторий, произведено изменение бейджиков (исправлены ссылки) и была произведена установка пакета (последний клип "STEP 8 WITH OTHER REQUEST PATH").
+# Brain-Games
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/rhanmar/php-project-lvl1/maintainability)
 
 [![Build Status](https://travis-ci.org/rhanmar/php-project-lvl1.svg?branch=master)](https://travis-ci.org/rhanmar/php-project-lvl1)
 
-step 4
-[![asciicast](https://asciinema.org/a/W3zmxobTvgv9D6zE4nXC6t4gy.svg)](https://asciinema.org/a/W3zmxobTvgv9D6zE4nXC6t4gy)
+This project is a set of console mini-games.
 
-step 5
-[![asciicast](https://asciinema.org/a/1CP6GmhGONUoyItZHlOsMHwrL.svg)](https://asciinema.org/a/1CP6GmhGONUoyItZHlOsMHwrL)
+## Installation
+With Composer:
+`composer global require rhanmar1/brain-games:dev-master`
 
-step 6
-[![asciicast](https://asciinema.org/a/mUVMgb9bokv9NeewUadKpJqXC.svg)](https://asciinema.org/a/mUVMgb9bokv9NeewUadKpJqXC)
+## Example of gameplay
 
-step 7
-[![asciicast](https://asciinema.org/a/8R8YjaZ7iXRWTSzGiMGjR20hO.svg)](https://asciinema.org/a/8R8YjaZ7iXRWTSzGiMGjR20hO)
+```
+$ brain-calc 
+Welcome to the Brain Games!
+What is the result of the expression?
 
-step 8
-[![asciicast](https://asciinema.org/a/DjvmDVAeUk0mCFiTvitu1RF9u.svg)](https://asciinema.org/a/DjvmDVAeUk0mCFiTvitu1RF9u)
+May I have your name?: Dmitriy
+Hello, Dmitriy!
 
-STEP 8 WITH OTHER REQUEST PATH
-[![asciicast](https://asciinema.org/a/5z382Hdlo9Hioow3s1K11zCx0.svg)](https://asciinema.org/a/5z382Hdlo9Hioow3s1K11zCx0)
+Question: 29 - 80
+Your answer: : 0101
+"0101" is wrong answer ;( Correct answer was "-51"
+Let's try again, Dmitriy
+
+Question: 89 * 92
+Your answer: : 1
+"1" is wrong answer ;( Correct answer was "8188"
+Let's try again, Dmitriy
+
+Question: 22 + 91
+Your answer: : 113
+Correct!
+Congratulations, Dmitriy!
+```
+
+##List of games
+
+Write the result of the expression:
+`$ brain-calc`
+
+Find even numbers
+`$ brain-calc`
+
+Find the greatest common divisor of given numbers
+`$ brain-gcd`
+
+Find prime numbers
+`$ brain-prime`
+
+Write missing number in the progression?:
+`$ brain-progression`
