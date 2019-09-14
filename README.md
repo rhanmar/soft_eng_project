@@ -36,7 +36,7 @@ Correct!
 Congratulations, Dmitriy!
 ```
 
-##List of games
+## List of games
 
 Write the result of the expression:
 `$ brain-calc`
