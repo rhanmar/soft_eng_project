@@ -38,17 +38,17 @@ Congratulations, Dmitriy!
 
 ## List of games
 
-Write the result of the expression:
+Write the result of the expression:  
 `$ brain-calc`
 
-Find even numbers
-`$ brain-calc`
+Find even numbers:  
+`$ brain-even`
 
-Find the greatest common divisor of given numbers
+Find the greatest common divisor of given numbers:  
 `$ brain-gcd`
 
-Find prime numbers
+Find prime numbers:  
 `$ brain-prime`
 
-Write missing number in the progression?:
+Write missing number in the progression:  
 `$ brain-progression`
