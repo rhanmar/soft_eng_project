@@ -1,8 +1,8 @@
 {
-    "name": "rhanmar1/brain-games",
-    "description": "project1: brain-games",
+    "name": "rhanmar1/soft_eng_project",
+    "description": "software engineering project",
     "type": "project",
-    "keywords": ["BrainGames", "PHP", "project1"],
+    "keywords": ["PHP", "software engineering project"],
     "authors": [
         {
             "name": "Dmitriy",
@@ -14,25 +14,31 @@
         "bin/brain-calc",
         "bin/brain-gcd",
         "bin/brain-progression",
-        "bin/brain-prime"
+        "bin/brain-prime",
+        "bin/start-training"
     ],
     "autoload": {
+      "psr-4": {"BrainGames\\": "src/"},
       "files": [
         "src/core.php",
         "src/games/even.php",
         "src/games/calc.php",
         "src/games/gcd.php",
         "src/games/progression.php",
-        "src/games/prime.php"
+        "src/games/prime.php",
+        "src/starter.php"
       ]
     },
     "scripts": {
-        "phpcs": "phpcs"
+        "phpcs": "phpcs",
+        "phpunit": "phpunit",
+        "test": "phpunit tests"
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "^3.4"
+        "squizlabs/php_codesniffer": "^3.4",
+        "phpunit/phpunit": "^8.5"
     }
 }

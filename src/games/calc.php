@@ -3,36 +3,61 @@
 namespace BrainGames\games\Calc;
 
 use function BrainGames\Core\runCore;
-use const BrainGames\Core\ROUNDS_COUNT;
 
 const DESCRIPTION = "What is the result of the expression?";
-const MIN = 1;
-const MAX = 100;
 const OPERATIONS = ['+', '*', '-'];
 
-function runCalc()
+
+function makeNumber($randParams) // create number
 {
-    $gameData = [];
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $number1 = rand(MIN, MAX);
-        $number2 = rand(MIN, MAX);
+    $number = rand($randParams[0], $randParams[1]);
+    return $number;
+}
+
+
+function findCorrectAnswer($number1, $number2, $operation)
+{
+    $correctAnswer = null;
+
+    switch ($operation) {
+        case '+':
+            $correctAnswer = $number1 + $number2;
+            break;
+        case '*':
+            $correctAnswer = $number1 * $number2;
+            break;
+        case '-':
+            $correctAnswer = $number1 - $number2;
+    }
+    return $correctAnswer;
+}
+
+
+function runCalc($gameData)
+{
+
+    $roundsCount = $gameData->getRoundsCount();
+    $randParams = $gameData->getRandParams();
+
+    $result = [];
+
+    for ($i = 0; $i < $roundsCount; $i++) {
+
+        $number1 = makeNumber($randParams);
+        $number2 = makeNumber($randParams);
+
         $operation = OPERATIONS[array_rand(OPERATIONS)];
 
-        $correctAnswer = null;
+        $correctAnswer = findCorrectAnswer($number1, $number2, $operation);
 
-        switch ($operation) {
-            case '+':
-                $correctAnswer = $number1 + $number2;
-                break;
-            case '*':
-                $correctAnswer = $number1 * $number2;
-                break;
-            case '-':
-                $correctAnswer = $number1 - $number2;
-        }
         $question = "{$number1} {$operation} {$number2}";
 
-        $gameData[] = [$question, strval($correctAnswer)];
+        $result[] = [$question, strval($correctAnswer)];
     }
-    runCore($gameData, DESCRIPTION);
+
+    $gameData->setGameData($result);
+    $gameData->setDescription(DESCRIPTION);
+
+    runCore($gameData);
+
 }

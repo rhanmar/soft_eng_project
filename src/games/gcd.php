@@ -3,11 +3,8 @@
 namespace BrainGames\games\Gcd;
 
 use function BrainGames\Core\runCore;
-use const BrainGames\Core\ROUNDS_COUNT;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
-const MIN = 1;
-const MAX = 100;
 
 function findGcd($number1, $number2)
 {
@@ -18,15 +15,26 @@ function findGcd($number1, $number2)
     return 0 == $remainder ? $small : findGcd($small, $remainder);
 }
 
-function runGcd()
+function runGcd($gameData)
 {
-    $gameData = [];
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $number1 = rand(MIN, MAX);
-        $number2 = rand(MIN, MAX);
+    $randParams = $gameData->getRandParams();
+
+    $result = [];
+
+    for ($i = 0; $i < $gameData->getRoundsCount(); $i++) {
+
+        $number1 = rand($randParams[0], $randParams[1]);
+        $number2 = rand($randParams[0], $randParams[1]);
+
         $correctAnswer = findGcd($number1, $number2);
+
         $question = "{$number1} {$number2}";
-        $gameData[] = [$question, strval($correctAnswer)];
+        
+        $result[] = [$question, strval($correctAnswer)];
     }
-    runCore($gameData, DESCRIPTION);
+
+    $gameData->setGameData($result);
+    $gameData->setDescription(DESCRIPTION);
+
+    runCore($gameData);
 }

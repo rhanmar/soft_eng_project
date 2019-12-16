@@ -3,24 +3,32 @@
 namespace BrainGames\games\Even;
 
 use function BrainGames\Core\runCore;
-use const BrainGames\Core\ROUNDS_COUNT;
 
 const DESCRIPTION = 'Answer "yes" if number even otherwise answer "no"';
-const MIN = 1;
-const MAX = 100;
 
 function isEven($number)
 {
     return ($number % 2 === 0);
 }
 
-function runEven()
+function runEven($gameData)
 {
-    $gameData = [];
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $question = rand(MIN, MAX);
+	$roundsCount = $gameData->getRoundsCount();
+    $randParams = $gameData->getRandParams();
+
+    $result = [];
+
+    for ($i = 0; $i < $roundsCount; $i++) {
+
+        $question = rand($randParams[0], $randParams[1]);
+
         $correctAnswer = isEven($question) ? 'yes' : 'no';
-        $gameData[] = [$question, $correctAnswer];
+        
+        $result[] = [$question, $correctAnswer];
     }
-    runCore($gameData, DESCRIPTION);
+    
+    $gameData->setGameData($result);
+    $gameData->setDescription(DESCRIPTION);
+
+    runCore($gameData);
 }

@@ -3,29 +3,61 @@
 namespace BrainGames\Core;
 
 use function \cli\line;
-use function \cli\prompt;
 
-const ROUNDS_COUNT = 3;
-
-function runCore($gameData, $gameDescription)
+function getName()
 {
-    line("Welcome to the Brain Games!");
-    line($gameDescription);
-    line();
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        [$question, $correctAnswer] = $gameData[$i];
+    $standardName = "Guest";
+    $name = readline("Name: ");
+    if (strlen($name) === 0) {
+        $name = $standardName;
+    }
+    return $name;
+}
+
+function start($name, $gameData)
+{
+    $points = 0;
+
+    
+    for ($i = 0; $i < $gameData->getRoundsCount(); $i++) {
+        [$question, $correctAnswer] = $gameData->getGameData()[$i];
         line();
         line("Question: %s", $question);
-        $answer = prompt('Your answer: ');
+
+        $answer = readline("Your answer: ");
+
+        // Give a respond
         if ($answer === $correctAnswer) {
             line("Correct!");
-        } else {
-            line('"%s" is wrong answer ;( Correct answer was "%s"', $answer, $correctAnswer);
-            line("Let's try again, %s", $name);
+            $points += 1;
+        } elseif (strlen($answer) === 0) {
+            line("Emptiness is wrong answer. Correct answer is %s", $correctAnswer);
         }
-    }
+        else {
+            line("%s is wrong answer", $answer);
+            line("Correct answer is %s", $correctAnswer);
+        }
+    }  
 
-    line("Congratulations, %s!", $name);
+    // Give an end
+    line();
+    if ($points === $gameData->getRoundsCount()) {
+        line("You've earned maximum points quantity!");
+    } else {
+        line("You've got %d points!", $points);
+    }
+    line("Congratulations, %s!", $name);    
+}
+
+
+function runCore($gameData)
+{    
+    line();
+    $name = getName();
+    line("Hello, %s!", $name);
+
+    line("Let's start!");
+    line("Task: %s", $gameData->getDescription());
+
+    start($name, $gameData);
 }
