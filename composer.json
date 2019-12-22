@@ -9,16 +9,11 @@
             "email": "dimontura@yandex.ru"
         }
     ],
-    "bin": [    	
-        "bin/brain-even",
-        "bin/brain-calc",
-        "bin/brain-gcd",
-        "bin/brain-progression",
-        "bin/brain-prime",
+    "bin": [
         "bin/start-training"
     ],
     "autoload": {
-      "psr-4": {"BrainGames\\": "src/"},
+      "psr-4": {"MindCoach\\": "src/"},
       "files": [
         "src/core.php",
         "src/games/even.php",

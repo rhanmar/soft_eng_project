@@ -1,16 +1,16 @@
 <?php
 
-namespace BrainGames\Tests;
+namespace MindCoach\Tests;
 
 use PHPUnit\Framework\TestCase;
 
-use function BrainGames\games\Calc\findCorrectAnswer;
-use function BrainGames\games\Gcd\findGcd;
+use function MindCoach\games\Calc\findCorrectAnswer;
+use function MindCoach\games\Gcd\findGcd;
 
-use function BrainGames\Starter\prepareForStart;
+use function MindCoach\Starter\prepareForStart;
 
 
-class BrainGamesTest extends TestCase
+class MindCoachTest extends TestCase
 {
 	// White box test
 	public function testCalc()

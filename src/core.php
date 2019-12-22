@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Core;
+namespace MindCoach\Core;
 
 use function \cli\line;
 

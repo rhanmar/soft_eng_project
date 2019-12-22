@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\games\Even;
+namespace MindCoach\games\Even;
 
-use function BrainGames\Core\runCore;
+use function MindCoach\Core\runCore;
 
 const DESCRIPTION = 'Answer "yes" if number even otherwise answer "no"';
 

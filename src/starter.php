@@ -1,23 +1,23 @@
 <?php
 
-namespace BrainGames\Starter;
+namespace MindCoach\Starter;
 
-use function BrainGames\games\Calc\runCalc;
-use function BrainGames\games\Even\runEven;
-use function BrainGames\games\Gcd\runGcd;
-use function BrainGames\games\Prime\runPrime;
-use function BrainGames\games\Progression\runProgression;
+use function MindCoach\games\Calc\runCalc;
+use function MindCoach\games\Even\runEven;
+use function MindCoach\games\Gcd\runGcd;
+use function MindCoach\games\Prime\runPrime;
+use function MindCoach\games\Progression\runProgression;
 
-use const BrainGames\games\Calc\DESCRIPTION as d1;
-use const BrainGames\games\Even\DESCRIPTION as d2;
-use const BrainGames\games\Gcd\DESCRIPTION as d3;
-use const BrainGames\games\Prime\DESCRIPTION as d4;
-use const BrainGames\games\Progression\DESCRIPTION as d5;
+use const MindCoach\games\Calc\DESCRIPTION as d1;
+use const MindCoach\games\Even\DESCRIPTION as d2;
+use const MindCoach\games\Gcd\DESCRIPTION as d3;
+use const MindCoach\games\Prime\DESCRIPTION as d4;
+use const MindCoach\games\Progression\DESCRIPTION as d5;
 
 use function \cli\line;
 //use function \cli\prompt;
 
-use BrainGames\GameData; // get a way to object
+use MindCoach\GameData; // get a way to object
 
 
 function showGames()

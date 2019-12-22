@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\games\Prime;
+namespace MindCoach\games\Prime;
 
-use function BrainGames\Core\runCore;
+use function MindCoach\Core\runCore;
 
 const DESCRIPTION = "Answer \"yes\" if given number is prime. Otherwise answer \"no\"";
 

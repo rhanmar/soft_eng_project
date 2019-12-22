@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\games\Progression;
+namespace MindCoach\games\Progression;
 
-use function BrainGames\Core\runCore;
+use function MindCoach\Core\runCore;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 const PROGRESSION_LENGTH = 10;
