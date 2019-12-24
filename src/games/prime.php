@@ -27,7 +27,6 @@ function runPrime($gameData)
     $result = [];
 
     for ($i = 0; $i < $gameData->getRoundsCount(); $i++) {
-
         $number = rand($radnParams[0], $radnParams[1]);
 
         $correctAnswer = (isPrime($number) ? 'yes' : 'no');

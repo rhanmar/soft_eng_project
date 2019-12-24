@@ -23,7 +23,6 @@ function runProgression($gameData)
     $result = [];
 
     for ($i = 0; $i < $gameData->getRoundsCount(); $i++) {
-
         $diff = rand($randParams[0], $randParams[1]); // common difference of successive members
         $start = rand($randParams[0], $randParams[1]); // start member of arithmetic progression
 
@@ -41,7 +40,7 @@ function runProgression($gameData)
     }
 
     $gameData->setGameData($result);
-    $gameData->setDescription(DESCRIPTION);    
+    $gameData->setDescription(DESCRIPTION);
 
     runCore($gameData);
 }

@@ -42,7 +42,6 @@ function runCalc($gameData)
     $result = [];
 
     for ($i = 0; $i < $roundsCount; $i++) {
-
         $number1 = makeNumber($randParams);
         $number2 = makeNumber($randParams);
 
@@ -59,5 +58,4 @@ function runCalc($gameData)
     $gameData->setDescription(DESCRIPTION);
 
     runCore($gameData);
-
 }

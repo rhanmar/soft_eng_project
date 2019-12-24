@@ -32,12 +32,11 @@ function start($name, $gameData)
             $points += 1;
         } elseif (strlen($answer) === 0) {
             line("Emptiness is wrong answer. Correct answer is %s", $correctAnswer);
-        }
-        else {
+        } else {
             line("%s is wrong answer", $answer);
             line("Correct answer is %s", $correctAnswer);
         }
-    }  
+    }
 
     // Give an end
     line();
@@ -46,12 +45,12 @@ function start($name, $gameData)
     } else {
         line("You've got %d points!", $points);
     }
-    line("Congratulations, %s!", $name);    
+    line("Congratulations, %s!", $name);
 }
 
 
 function runCore($gameData)
-{    
+{
     line();
     $name = getName();
     line("Hello, %s!", $name);

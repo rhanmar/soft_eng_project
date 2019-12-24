@@ -22,7 +22,6 @@ function runGcd($gameData)
     $result = [];
 
     for ($i = 0; $i < $gameData->getRoundsCount(); $i++) {
-
         $number1 = rand($randParams[0], $randParams[1]);
         $number2 = rand($randParams[0], $randParams[1]);
 
